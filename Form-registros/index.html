@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="validar.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Formulario de registro de Peliculas</h1>
+
+    <div>
+        <form action="mostrarDatos.php">
+            <input type="submit" value="Mostrar cartelera" class="boton-cartelera">
+        </form> 
+    </div>
+
+    <form class="form-registro" action="registro.php" method="post" onsubmit="return validar()">
+        <h2 class="form-titulo">Registra la pelicula</h2>
+        <div class="contenedor-inputs" >
+
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required><br><br>
+            <label>Categoria:</label>
+            <select type="text" id="categoria" name="categoria" required>
+                <option value="Fantasia">Fantasia</option>
+                <option value="Accion">Accion</option>
+                <option value="Drama" selected>Drama</option>
+                <option value="Terror" selected>Terror</option>
+                <option value="Ciencia ficcion" selected>Ciencia ficcion</option>
+            </select><br><br><br>
+
+            <div>--------------------------------------------</div><br><br>
+
+            <input type="text" id="anio" name="anio" placeholder="Año" required><br><br>
+            <input type="text" id="director" name="director" placeholder="director" required><br><br>
+            <label>Clasificacion:</label>
+            <select type="text" id="clasificacion" name="clasificacion" required>
+                <option value="PG-13" selected>B-13</option>
+                <option value="PG" selected>PG</option>
+                <option value="B15">B15</option>
+                <option value="R-18">R-18</option>
+            </select><br><br><br>
+
+           <div></div><br><br><br>
+
+            <input type="submit" value="Registrar" class="boton-enviar"><br><br><br><br><br>
+        </div>
+        
+        
+    </form>
+
+</body>
+</html>
